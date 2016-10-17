@@ -22,6 +22,9 @@ dependencies:
   # builds. If you need to, you can add custom paths to cache:
   cache_directories:
     - "test/fixtures/node_modules"
+  pre:
+    - npm install
+    - gulp updateFixtures:deps && cd test/fixtures && npm i --quiet
 #  post:
 #    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
 #    - tar -xzf sc-latest-linux.tar.gz
